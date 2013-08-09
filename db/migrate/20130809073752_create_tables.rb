@@ -8,7 +8,7 @@ class CreateTables < ActiveRecord::Migration
     end
 
     create_table :posts do |t|
-      t.string :title, :index
+      t.string :title, index: true, unique: true
       t.text :body
       t.belongs_to :user
       t.timestamps
@@ -20,7 +20,9 @@ class CreateTables < ActiveRecord::Migration
     end
 
     create_table :tagbooks do |t|
-      t.
+      t.integer :tag_id
+      t.integer :post_id
+      t.timestamps
     end
   end
 end
