@@ -6,7 +6,7 @@ class CreateTables < ActiveRecord::Migration
       t.string :password_hash
       t.timestamps
     end
-
+    
     create_table :posts do |t|
       t.string :title, index: true, unique: true
       t.text :body

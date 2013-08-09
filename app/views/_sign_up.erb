@@ -1,6 +1,8 @@
 <div class="container">
   <form action="/sign_up" method="post">
-    <li><input type="text" name="user[name]" placeholder="Enter name"></li>
+    <label for="name">Name
+      <li><input id="name" type="text" name="user[name]" placeholder="Enter name"></li>
+    </label>
     <li><input type="text" name="user[email]" placeholder="Enter email"></li>
     <li><input type="password" name="user[password]" placeholder="Enter password"></li>
     <li><input class="button" type="submit" value="Sign Up">
